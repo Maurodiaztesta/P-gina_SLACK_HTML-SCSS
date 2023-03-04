@@ -1,0 +1,69 @@
+@mixin flexElement($justify:space-evenly, $direction: row, $align:center, $gap: 0px){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    gap: $gap;
+}
+@mixin button1($background: white, $color: #541554){
+    border: none;
+    border-radius: 4px;
+    padding: 19px 78px 20px;
+    font-weight: 700;
+    line-height: 1.2857;
+    letter-spacing: 0.8px;
+    font-size: .875rem;
+    text-decoration: none;
+    text-align: center; 
+    background-color: $background;
+    color: $color;
+}
+@mixin button2($background: white, $color: #541554){
+    border: none;
+    border-radius: 4px;
+    padding: 19px 40px 20px;
+    font-weight: 700;
+    line-height: 1.2857;
+    letter-spacing: 0.8px;
+    font-size: .875rem;
+    text-decoration: none;
+    text-align: center; 
+    background-color: $background;
+    color: $color;
+}
+@mixin h2main($size:32px, $color:black){
+    font-size: $size;
+    color: $color;
+    margin: 0px 0px 16px;
+    font-weight: 700;
+    line-height: 1.1875;
+    letter-spacing: -.3px;
+}
+@mixin pbody($size:18px, $color:black){
+    font-size: $size;
+    color: $color;
+    margin: 0px 0px 16px;
+    font-weight: 400;
+    line-height: 1.4444;
+    letter-spacing: normal;
+}
+@mixin abody($size:18px, $color:$azulanchord){
+    font-size: $size;
+    color: $color;
+    line-height: 1.4444;
+    letter-spacing: normal;
+    font-weight: 400;
+    
+}
+@mixin porcentaje($size:48px, $color:black){
+    font-size: $size;
+    color: $color;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: normal;
+    white-space: nowrap;
+    display: inline-block;
+    margin-bottom: 0px 0px 4px;
+}
+
+

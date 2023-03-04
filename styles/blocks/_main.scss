@@ -1,0 +1,200 @@
+main{
+    max-width: 100%;
+    min-height: 100vh;
+    .bloque-div-1{
+        background-color: $grisclaro;
+        @include flexElement($justify:flex-start, $direction:column, $align:center, $gap: 0px);
+        &__tituloeimagenes{
+            padding-top: 48px;
+            &--titulo{
+                margin: 0px 0px 16px;
+                padding: 0px 31px;
+                text-align: center;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 1.125;
+                letter-spacing: .8px;
+            }
+            &--imagenes{
+                @include flexElement($justify:center, $direction:row, $align:center, $gap: 20px);
+                flex-wrap: wrap; 
+                width: 358px;
+                height: 216px;
+                padding: 0px 15px;
+                margin-top: 20px;
+                img{
+                    height: 37px;
+                }  
+            }
+            }
+        &__imagenytexto1{
+            padding: 48px 0px;
+        }
+        &__informacion{
+            margin: 32px 16px 0px 16px;
+            h2{
+                @include h2main()
+            }
+            p{
+                @include pbody()
+            }
+            a{
+                @include abody()
+            }
+        }
+        &__imagen-main-2{
+            display: flex;
+            justify-content: flex-end;
+            padding: opx 0px 10px 0px;
+        }
+        &__imagenytexto3{
+            padding-bottom: 48px 0px 10px 0px;
+        }
+        &__imagen-main-3{
+            padding: 48px 0px 0px 0px;
+        }
+        &__informacion{
+            padding-bottom: 48px;
+            a{
+                font-weight: 500;
+            }
+        }
+        }
+    }
+    .bloque-div-2{
+        @include flexElement($justify:center, $direction:column, $align:center, $gap: 0px);
+        margin: 48px 10px 14px 10px;
+        text-align: center;
+        &__textos{
+            h1{
+                @include h2main();
+                margin-top: 32px;
+            }
+            p{
+                @include pbody();
+            }
+        }
+        &__botones{
+            @include flexElement($justify:flex-start, $direction:column, $align:center, $gap: 15px);
+            margin: 16px 0px 64px;
+            &--morado{
+                @include button2($morado, $blanco);
+                width: 261px;
+            }
+            &--blanco{
+                @include button2($blanco, $morado);
+                border: 1px solid black;
+            }
+        }
+        &__porcentajesytexto{
+            @include flexElement($justify:flex-start, $direction:column, $align:center, $gap: 40px);
+            margin: 18px 0px 16px;
+            padding: 0px 0px 32px 0px;
+            h2{
+                @include porcentaje(48px, $morado);
+            }
+            p{
+                @include abody(14px, black)
+            }
+            &--numero{
+                margin: 0px 0px 4px;
+            }
+            &--letras{
+                width: 190px;
+            }
+        }
+        &__video{
+            margin: 40px 0px;
+            @include flexElement($justify:flex-start, $direction:column, $align:flex-end, $gap: 0px);
+            padding-top: unset;
+            width: 97%;
+            &--video{
+                margin: 10px 0px 20px;
+                border-top-right-radius: 500px;
+                border-bottom-right-radius: 500px;
+            }
+        }
+        &__textos2{
+            @include flexElement($justify:flex-start, $direction:column, $align:flex-start, $gap: 0px);
+            padding: 32px;
+            width: 327px;
+            text-align: start;
+            &--cursiva{
+                @include pbody(20px, black);
+                font-style: italic;
+            }
+            &--mark{
+                @include pbody(16px, black);
+                font-weight: 600;
+                margin: 0px;
+            }
+            &--responsable{
+                @include pbody(16px, black);
+            }
+            &--anchord{
+                @include abody(17px, $azulanchord);
+                font-weight: 500;
+            }
+            &--anchord::after{
+                content: " →";
+            }
+        }
+        &__footer{
+            @include pbody(14px, rgb(97, 97, 97));
+        }
+    }
+    .bloque-div-3{
+        @include flexElement($justify:flex-start, $direction:column, $align:center, $gap: 0px);
+        padding: 32px 0px 25px 0px;
+        background-color: $grisclaro;
+        &__h2{
+            @include h2main(24px, black);
+            text-align: center;
+        }
+        &__gallery{
+            &--object{
+                background-color: white;
+                @include flexElement($justify:flex-start, $direction:column, $align:center, $gap: 0px);
+                width: 285px;
+                height: 420px;
+            }
+            &--object-image{
+                padding: 12px 0px;
+            }
+            &--object-description{
+                padding: 0px 12px;
+            }
+            &--object-description-titulo{
+                @include pbody(14px, rgb(97, 97, 97));
+                margin-top: 8px;
+                font-weight: 400;
+            }
+            &--object-description-texto{
+                @include h2main(22.4px, black);
+                margin: 8px 0px 16px;
+            }
+            &--object-anchord{
+                @include flexElement($justify:space-between, $direction:row, $align:center, $gap: 0px);
+                width: 285px;
+                margin-top: 64px;
+            }
+            &--object-a{
+                @include abody(14px, $azulanchord);
+                font-weight: 500;
+                padding: 0px 12px;
+            }
+            &--object-arrow{
+                margin-right: 10px;
+            }
+        }
+        &__puntos{
+            padding-top: 30px;
+            img{
+                height: 15px;
+                margin: 0px 5px 0px 5px;
+            }
+        }
+    }
+
+
+
