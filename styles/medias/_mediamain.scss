@@ -1,0 +1,233 @@
+@media screen and (min-width: 1200px) {
+    main{
+        max-width: 100%;
+        min-height: 100vh;
+        .bloque-div-1{
+            background-color: $grisclaro;
+            @include flexElement($justify:flex-start, $direction:column, $align:center, $gap: 0px);
+            &__tituloeimagenes{
+                padding-top: 48px;
+                width: 90%;
+                &--titulo{
+                    margin: 0px 0px 16px;
+                    padding: 0px 31px;
+                    text-align: center;
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 1.125;
+                    letter-spacing: .8px;
+                    h2{
+                        margin: 0px 0px 16px;
+                    }
+                }
+                &--imagenes{
+                    @include flexElement($justify:center, $direction:row, $align:center, $gap: 70px);
+                    flex-wrap: wrap; 
+                    width: 90%;
+                    height: 60px;
+                    padding: 0px 15px;
+                    margin: 0px 110px;
+                    img{
+                        height: 37px;
+                    }  
+                }
+                }
+            &__imagenytexto1{
+                @include flexElement($justify:center, $direction:row, $align:center, $gap: 130px);
+                padding: 48px 0px;
+                margin: 0px 336px;
+            }
+            &__imagen-main-1{
+                content: url(/imagenes/imagen_1_body_web.png);
+            }
+            &__informacion{
+                margin: 32px 16px 0px 16px;
+                h2{
+                    @include h2main()
+                }
+                p{
+                    @include pbody()
+                }
+                a{
+                    @include abody()
+                }
+            }
+            &__imagenytexto2{
+                margin: 0px 336px;
+                @include flexElement($justify:center, $direction:row, $align:center, $gap: 130px);
+            }
+            &__imagen-main-2{
+                content: url(/imagenes/imagen_2_body_web.png);
+                display: flex;
+                justify-content: flex-end;
+                padding: opx 0px 10px 0px;
+                order: 2;
+            }
+            &__imagenytexto3{
+                margin: 0px 336px;
+                @include flexElement($justify:center, $direction:row, $align:center, $gap: 130px);
+                padding-bottom: 48px 0px 10px 0px;
+            }
+            &__imagen-main-3{
+                content: url(/imagenes/imagen_3_body_web.png);
+                padding: 48px 0px 0px 0px;
+            }
+            &__informacion{
+                padding-bottom: 48px;
+                a{
+                    font-weight: 500;
+                }
+            }
+            }
+        }
+        .bloque-div-2{
+            @include flexElement($justify:center, $direction:column, $align:center, $gap: 0px);
+            margin: 48px 10px 14px 10px;
+            text-align: center;
+            &__textos{
+                @include flexElement($justify:center, $direction:column, $align:center, $gap: 0px);
+                h1{
+                    @include h2main(50px);
+                    margin: 50px 231px 16px;
+                    width: 420px;
+                }
+                p{
+                    @include pbody();
+                    width: 570px;
+                    margin: 0px 231px 16px;
+                    text-align: center;
+                }
+            }
+            &__botones{
+                @include flexElement($justify:flex-start, $direction:row, $align:center, $gap: 15px);
+                margin: 16px 0px 64px;
+                &--morado{
+                    @include button2($morado, $blanco);
+                    width: 261px;
+                }
+                &--blanco{
+                    @include button2($blanco, $morado);
+                    border: 1px solid black;
+                }
+            }
+            &__porcentajesytexto{
+                @include flexElement($justify:flex-start, $direction:row, $align:center, $gap: 240px);
+                margin: 18px 0px 16px;
+                padding: 0px 0px 32px 0px;
+                h2{
+                    @include porcentaje(64px, $morado);
+                }
+                p{
+                    @include abody(14px, black)
+                }
+                &--numero{
+                    margin: 0px 0px 4px;
+                }
+                &--letras{
+                    width: 190px;
+                }
+            }
+            &__videotextos{
+                @include flexElement($justify:flex-start, $direction:row, $align:center, $gap: 20px);
+                margin: 0px 186px 20px;
+                width: 82%;
+            }
+            &__video{
+                content: url(/imagenes/video_copiado_web.png);
+                @include flexElement($justify:flex-start, $direction:column, $align:flex-end, $gap: 0px);
+                padding: 32px 0px 0px;
+                width: 776px;
+                height: auto;
+
+            }
+            &__textos2{
+                @include flexElement($justify:flex-start, $direction:column, $align:flex-start, $gap: 0px);
+                padding: 32px;
+                width: 550px;
+                text-align: start;
+                &--cursiva{
+                    @include pbody(24px, black);
+                    font-style: italic;
+                    width: 700px;
+                }
+                &--mark{
+                    @include pbody(16px, black);
+                    font-weight: 600;
+                    margin: 0px;
+                }
+                &--responsable{
+                    @include pbody(16px, black);
+                }
+                &--anchord{
+                    @include abody(17px, $azulanchord);
+                    font-weight: 500;
+                }
+                &--anchord::after{
+                    content: " →";
+                }
+            }
+            &__footer{
+                @include pbody(14px, rgb(97, 97, 97));
+            }
+        }
+        .bloque-div-3{
+            @include flexElement($justify:flex-start, $direction:column, $align:center, $gap: 0px);
+            padding: 32px 0px 25px 0px;
+            background-color: $grisclaro;
+            &__h2{
+                @include h2main(32px, black);
+                text-align: center;
+                margin: 26px 0px 16px;
+            }
+            &__gallery{
+                width: 60%;
+                margin: 32px 0px 16px;
+                content: url(/imagenes/tarjetas.png); /* Es trampa, lo se. Pero tenía miedo a destrozar todo el codigo XD */
+                &--object{
+                    background-color: white;
+                    @include flexElement($justify:flex-start, $direction:column, $align:center, $gap: 0px);
+                    width: 285px;
+                    height: 420px;
+                }
+                &--object-image{
+                    padding: 12px 0px;
+                }
+                &--object-description{
+                    padding: 0px 12px;
+                }
+                &--object-description-titulo{
+                    @include pbody(14px, rgb(97, 97, 97));
+                    margin-top: 8px;
+                    font-weight: 400;
+                }
+                &--object-description-texto{
+                    @include h2main(22.4px, black);
+                    margin: 8px 0px 16px;
+                }
+                &--object-anchord{
+                    @include flexElement($justify:space-between, $direction:row, $align:center, $gap: 0px);
+                    width: 285px;
+                    margin-top: 64px;
+                }
+                &--object-a{
+                    @include abody(14px, $azulanchord);
+                    font-weight: 500;
+                    padding: 0px 12px;
+                }
+                &--object-arrow{
+                    margin-right: 10px;
+                }
+            }
+            &__puntos{
+                padding-top: 30px;
+                img{
+                    height: 15px;
+                    margin: 0px 5px 0px 5px;
+                }
+            }
+        }
+    
+    
+    
+    
+}

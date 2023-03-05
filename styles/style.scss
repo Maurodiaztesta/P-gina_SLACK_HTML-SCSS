@@ -5,9 +5,15 @@
 /* UTILITIES */
 @import './utilities/colors';
 @import './utilities/mixins';
+
 /* BLOCKS */
 @import './blocks/header';
 @import './blocks/main';
 @import './blocks/footer';
+
+/* MEDIAS */
+@import './medias/mediaheader';
+@import './medias/mediamain';
+@import './medias/mediafooter';
 
 

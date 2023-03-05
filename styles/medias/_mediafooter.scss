@@ -1,0 +1,121 @@
+@media screen and (min-width: 1200px) {
+    footer{
+        .div-footer-1{
+            @include flexElement($justify:center, $direction:column, $align:center, $gap: 20px);
+            height: 412px;
+            background-color: $morado;
+            clip-path: ellipse(100% 100% at center top);
+            
+            &__titulo{
+                @include h2main(38px, white);
+                text-align: center;
+            }
+            &__botones{
+                @include flexElement($justify:center, $direction:row, $align:center, $gap: 10px);
+                &--gratis{
+                    @include button1();
+                    width: 350px;
+                }
+                &--ventas{
+                    @include button1($morado, white);
+                    border: 1px solid white;
+                    width: 350px;
+                    text-align: center;
+                    padding: 20px 0px;
+                    
+                }
+            }
+        }
+        .div-footer-2{
+            padding: 56px 0px 0px;
+            &__logolista{
+                @include flexElement($justify:space-around, $direction:row, $align:center, $gap: 10px);
+                padding: 0px 15.6px;
+                width: 1800px;
+                &--logo{
+                    width: 54px;
+                    height: auto;
+                }
+            }
+            &__list{
+                @include flexElement($justify:space-between, $direction:row, $align:center, $gap: 0px);
+                margin-top: 30px;
+                &--letras{
+                    width: 800px;
+                    @include flexElement($justify:space-between, $direction:row, $align:center, $gap: 0px);
+                }
+                li{
+                    @include flexElement($justify:space-between, $direction:row, $align:center, $gap: 0px);
+                    font-size: 14px;
+                    font-weight: 600;
+                    height: 40px;
+                    img{
+                        width: 20px;
+                    }
+                }
+                
+            }
+        }
+        .div-footer-3{
+            &__lists{
+                @include flexElement($justify:space-between, $direction:row, $align:flex-start, $gap: 30px);
+                padding: 0px 15.6px;
+                padding-top: 15px;
+                border-top: 2px solid $grisclaro;
+                margin: 0px 333px;
+                &--textos{
+                    padding: 30px 0px 0px;
+                    @include flexElement($justify:space-between, $direction:row, $align:flex-start, $gap: 30px);
+                }
+                &--textos-a{
+                    @include abody(14px, black);
+                    font-weight: 600;
+                }
+                &--textos-a-logos{
+                    @include flexElement($justify:space-between, $direction:row, $align:center, $gap: 5px);
+                }
+                &--textos-a-logos-world{
+                    width: 20px;
+                }
+                &--textos-a-logos-arrow{
+                    width: 10px;
+                }
+            }
+            &__linkdescarga{
+                @include flexElement($justify:space-between, $direction:column, $align:flex-start, $gap: 0px);
+                padding: 16px 0px;
+                &--logo{
+                    width: 20px;
+                }
+                &--anchord{
+                    @include abody(14px, $azulanchord);
+                    font-weight: 600;
+                }
+            }
+            &__list-iconos{
+                @include flexElement($justify:space-between, $direction:row, $align:center, $gap: 0px);
+                height: 52px;
+                img{
+                    width: 25px;
+                }
+            }
+            &__copyright{
+                padding: 0px 15.6px;
+                margin: 30px 0px;
+                text-align: center;
+                p{
+                    @include abody(14px, black);
+                    font-size: 12px;
+                }
+            }
+        }
+    
+    }
+    .logo_static{
+        position: fixed;
+        bottom: 37px;
+        right: 37px;
+    }
+    
+    
+}
